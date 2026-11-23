@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy 24th Birthday, Bee! 🤍</title>
+  <!-- Google Fonts untuk nuansa romantis & elegan -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600&family=Sacramento&display=swap" rel="stylesheet">
+  <!-- Menghubungkan ke file CSS eksternal -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Kanvas untuk animasi konfeti & kelopak melayang -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Dekorasi latar belakang -->
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-orb orb-3"></div>
+
+  <main class="container">
+    <!-- BAGIAN 1: HERO / PEMBUKA -->
+    <header class="hero fade-in">
+      <div class="badge">✨ Special Day • 24th Chapter ✨</div>
+      <p class="subtitle">Untuk yang tersayang,</p>
+      <h1 class="main-title">Vera Septia Rahmadanti, S.Ak.</h1>
+      <p class="nickname">My <span>Bee</span> &amp; <span>Sayangggkuu</span> 🤍</p>
+      <p class="intro-text">
+        Hari ini adalah perayaan tentangmu, tentang senyuman manismu, dan semua hal baik yang telah kamu lewati. Mari bersyukur atas apa yang telah dilewati sejauh ini, selamat kamu telah berhasil melewati sampai titik ini I'm proud of you bee🤍🤗
+      </p>
+    </header>
+
+<!-- BAGIAN 2: KUE ULANG TAHUN INTERAKTIF (23 -> 24) -->
+    <section class="cake-section fade-in">
+      <h2 class="section-title">Make a Wish, Sayang 🎂</h2>
+      <p class="section-desc" id="wish-instruction">Pejamkan mata sejenak, ucapkan terima kasih kepada dirimu, dan tiup lilin untuk menyambut babak baru!</p>
+
+      <div class="cake-stage">
+        <div class="cake-wrapper" id="cake-wrapper">
+          <!-- Lilin Angka (Mulai dari 23, berubah menjadi 24 setelah ditiup) -->
+          <div class="candles">
+            <div class="candle">
+              <div class="flame" id="flame-1"></div>
+              <div class="smoke" id="smoke-1"></div>
+              <span class="candle-num" id="candle-digit-1">2</span>
+            </div>
+            <div class="candle">
+              <div class="flame" id="flame-2"></div>
+              <div class="smoke" id="smoke-2"></div>
+              <span class="candle-num" id="candle-digit-2">3</span>
+            </div>
+          </div>
+
+          <!-- Tingkat Atas Kue -->
+          <div class="cake-tier tier-top">
+            <div class="drip-layer">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="sprinkles"></div>
+          </div>
+
+          <!-- Tingkat Bawah Kue -->
+          <div class="cake-tier tier-bottom">
+            <div class="drip-layer">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="cake-ribbon" id="cake-ribbon-text">Chapter 23 • Make a Wish</div>
+          </div>
+
+          <!-- Piring Kue -->
+          <div class="cake-plate"></div>
+        </div>
+      </div>
+
+      <div class="cake-actions">
+        <button class="btn-primary" id="blow-candle-btn">Tiup Lilin Sekarang 🌬️✨</button>
+        <button class="btn-secondary hidden" id="relight-candle-btn">Ulangi Momen (23) 🕯️</button>
+      </div>
+    </section>
+
+    <!-- BAGIAN 3: AMPLOP SURAT DIGITAL INTERAKTIF -->
+    <section class="envelope-section fade-in">
+      <h2 class="section-title">A Special Letter For You 💌</h2>
+      <p class="section-desc">Klik amplop di bawah untuk membuka ucapan ulang tahunmu</p>
+
+      <div class="envelope-wrapper" id="envelope-wrapper" role="button" tabindex="0" aria-label="Buka surat ulang tahun">
+        <div class="envelope" id="envelope">
+          <div class="flap"></div>
+          <div class="pocket"></div>
+          <div class="wax-seal" id="wax-seal">🤍</div>
+          <div class="letter-preview">
+            <span>Untuk Bee...</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- KARTU SURAT TERBUKA -->
+      <div class="letter-modal" id="letter-modal">
+        <div class="letter-paper">
+          <button class="close-letter" id="close-letter" aria-label="Tutup surat">&times;</button>
+          <div class="letter-header">
+            <span class="letter-date">Babak Baru • Harapan dan target baru</span>
+            <h3>Untuk Sayangggkuuu, Bee 🤍</h3>
+          </div>
+          <div class="letter-body">
+            <p>
+              happy level up sayanggg, selamat telah menuntaskan tahun ke 23 dan selamat beranjak dan membuka lembaran baru di angka 24🤗🤍doa dan harapan terbaik insyaallah akan selalu mengiringi perjalanan mu, semoga sehat selalu cantik, sukses selalu, diberikan kebahagiaan serta kesejahteraan yang lebih baik lagiii🤍🤗
+            </p>
+          </div>
+          <div class="letter-footer">
+            <p>Dengan penuh cinta &amp; doa terbaik,salam penuh kehangatan</p>
+            <p class="signature">Luthfi🤍</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BAGIAN 4: GALERI FOTO KENANGAN -->
+    <section class="gallery-section fade-in">
+      <h2 class="section-title">Our Sweet Memories 📸</h2>
+      <p class="section-desc">Setiap momen bersamamu adalah cerita favoritku🕊️</p>
+
+      <div class="gallery-grid">
+        <!-- FOTO 1 -->
+        <figure class="polaroid" style="--rot: -2deg;">
+          <div class="photo-frame">
+            <img src="assets/images/foto1.jpg" alt="Kenangan indah bersama Vera 1" onerror="this.src='https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=600&q=80'" />
+          </div>
+          <figcaption>First date kita🤍😋</figcaption>
+        </figure>
+
+        <!-- FOTO 2 -->
+        <figure class="polaroid" style="--rot: 2.5deg;">
+          <div class="photo-frame">
+            <img src="assets/images/foto2.jpg" alt="Kenangan indah bersama Vera 2" onerror="this.src='https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=600&q=80'" />
+          </div>
+          <figcaption>Setiap langkah kecil bersamamu terasa istimewa ✨</figcaption>
+        </figure>
+
+        <!-- FOTO 3 -->
+        <figure class="polaroid" style="--rot: -1.5deg;">
+          <div class="photo-frame">
+            <img src="assets/images/foto3.jpg" alt="Kenangan indah bersama Vera 3" onerror="this.src='https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=600&q=80'" />
+          </div>
+          <figcaption>Semoga selalu bahagia di setiap harimu, Bee 🌸</figcaption>
+        </figure>
+
+        <!-- FOTO 4 -->
+        <figure class="polaroid" style="--rot: 2deg;">
+          <div class="photo-frame">
+            <img src="assets/images/foto4.jpg" alt="Kenangan indah bersama Vera 4" onerror="this.src='https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=600&q=80'" />
+          </div>
+          <figcaption>Menyambut angka baru dengan penuh harapan 🤗</figcaption>
+        </figure>
+
+        <!-- FOTO 5 -->
+        <figure class="polaroid" style="--rot: -2.2deg;">
+          <div class="photo-frame">
+            <img src="assets/images/foto5.jpg" alt="Kenangan indah bersama Vera 5" onerror="this.src='https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=600&q=80'" />
+          </div>
+          <figcaption>Do'a terbaik akan selalu menyertai mu🤍</figcaption>
+        </figure>
+
+        <!-- FOTO 6 -->
+        <figure class="polaroid" style="--rot: 1.8deg;">
+          <div class="photo-frame">
+            <img src="assets/images/foto6.jpg" alt="Kenangan indah bersama Vera 6" onerror="this.src='https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=600&q=80'" />
+          </div>
+          <figcaption>Semoga kita mampu bertahan dan kuat dalam perjalanan kita🤲🫰</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer fade-in">
+      <p>Made with 🤍 for <strong>Vera Septia Rahmadanti</strong> • From Luthfi 😎🤗</p>
+    </footer>
+  </main>
+
+  <!-- PEMUTAR MUSIK DISNEY MELODY (MELAYANG DI POJOK KANAN BAWAH) -->
+  <div class="music-player" id="music-player">
+    <!-- Audio opsional jika kamu menaruh file MP3 di assets/audio/disney-music.mp3 -->
+    <audio id="custom-disney-audio" src="assets/audio/disney-music.mp3" loop preload="auto"></audio>
+    <button class="music-btn" id="music-toggle-btn" aria-label="Putar atau jeda musik">
+      <span class="music-icon" id="music-icon">🎵</span>
+      <span class="music-label" id="music-label">Putar Musik✨</span>
+    </button>
+  </div>
+
+  <!-- Menghubungkan ke file JavaScript eksternal -->
+  <script src="js/script.js"></script>
+</body>
+</html>
